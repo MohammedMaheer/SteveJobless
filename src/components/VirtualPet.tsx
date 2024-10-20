@@ -22,13 +22,13 @@ const VirtualPet: React.FC = () => {
   }, []);
 
   const feed = () => {
-    setHunger(Math.min(100, hunger + 10));
+    setHunger(Math.min(100, hunger - 10));
     setHappiness(Math.min(100, happiness + 5));
   };
 
   const play = () => {
     setHappiness(Math.min(100, happiness + 15));
-    setHunger(Math.max(0, hunger - 5));
+    setHunger(Math.max(0, hunger + 5));
   };
 
   const presetAvatars = [
